@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Victor</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: #3d3c3e;
+            color: rgb(226, 223, 233);
+        }
+
+         .principal{
+            position: absolute;
+            margin-top: 16px;
+        }
+
+         .principal p{
+            text-align: center;
+            margin-top: 28px;
+            margin-left: 300px;
+        }
+
+        .principal h1{
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 17px;
+            margin-left: 300px;
+        }
+
+         .principal #foto{
+            margin-top: 33px;
+            margin-left: 450px;
+        }
+
+        .links {
+            position: absolute;
+            height: 110px;
+            width: 300px;
+            display: inline-block;
+            border-radius: 5px;
+            margin-left: 1250px;
+            
+            
+        }
+
+        .posts{
+            position: absolute;
+            height: 135px;
+            width: 335px;
+            border: 1px solid #252426 !important;
+            background-color: #252426 !important;
+            border-radius: 4px;
+            color: rgb(229, 223, 233);
+            margin-left: 1150px;
+            margin-top: 170px;
+        }
+
+        .posts h1{
+            font-size: 19px;
+            margin-left: 14px;
+            margin-top: 12px;
+        }
+
+        .posts p{
+            font-size: 15px;
+            margin-left: 14px;
+            margin-top: 3px;
+        }
+
+        .posts label{
+            font-size: 12px;
+            margin-left: 14px;
+            color: rgb(112, 110, 110);
+            margin-top: 1px;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+
+        #linkedln {
+            margin-left: 18px;
+        }
+
+        .posts:hover {
+            background-color: #28222c !important;
+  cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <%- include('partials/posts'); %>
+    <%- include('partials/conteiners'); %>
+        
+
+        <div class="links">
+            <a href="https://github.com/joaaobr">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="github" height="43px" width="43px"> 
+            </a>
+            <a id="linkedln" href="https://www.linkedin.com/in/jo%C3%A3o-victor-dos-santos-12b210236/">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEUKZsL///8AZME7eMgAWb7i6fUAXL/Az+oAYsFjj9B1m9QAYMBGgswAVr0AXb8AWr5ZjdBWh80ZbMTO3PCzx+drl9T2+f2Ssd7G1u0dbsXF1e3w9fs2dsfl7ffV4fIocsaApNmowOSMrNyrw+Wbt+AAUryFqNr2AL+0AAADz0lEQVR4nO3ca1+qMACAcZiA5ATMW+a98vT9P+LROkXiNruMLXae/2v1xyOy6QCjCAAAAAAAAAAAAAAAAAAAALBGnPjeiPbkZSJ36/W4qmSQlbIYTTfxyXx72CXBNYpkv4o/mAwDayx7m7hhWoWUWM2afUebcTiJ5UAReDweo1AS5VAZeNyLgXxQhZxrCo/Hou+NsyJ70AXGcS+EnSgifWC8SHxvngXyzlAYhzCeJqmp8FH63r4fE8IUGC+6P9YI3VTxatP9AzFXz/bvCt8b+GNyT2HX5aov3UEVip4xMO3+SBNlxsJp6Xv7fq5amApn3Z/xzQfivAzgW1tUrPSFDwF8SM1zfiDLisUk5KPwREjN5/QpgKnilbhXrmP0uz/bvxPR9jLwEFDgacm7+Ut/c5v53ijLSvHw4WhMB0Xue4usE2U1vOtv03Qy3e+S8PpeCJlVSZKVgcyCAIDfT+SyrI6Ok0+As4+QVbGbHabLxWTRf7qb7YrMa6XIdZpbpX3k2QPzSuyXjV8rk8dd4i1SjG90bs+3SQx1D7yvH5gnt0vlr830ufK06mNYMW2cl8nUm370/laIYmQ4W3covSwaGAob68FZ/1phudOuiLyYDwoPu9FeoSiejX0nE+H+Z4u1QiHNO/DVfOh8hdJWYT42LLx+NHN9XtlSoVxrL8tpGjheILFTqFmvU7txO6RaKZT5Jz+ir9xeiWSl8M9nBpnayunVqzYKh9eniXNTl8vpVvbhFwOP74nDadFG4RdGmbeXdriibqPwG2budqKnQofXQHgqjIfOhlNfhX1nX958FcaZq53ordDZOXRvhVNXX8DtF87TNP3EDLlyNZpaLlwOxkWSJIWYXX20q4vIrRY+jat/S4tCVmPjBWXuDkSLhave2V02ojDeBxAfHK1n2CvcZs1vYhcXQJxZOhpqrBWqvofpr7fSPOE3F84vTgKcXvze9AxHvy9sFY6U40Zleo6jMxmWChfqHWK8n8PRdGGpULe4lBiWqHZdKtzqRg3TkxwtudkpfNbN3tKwSNWpQu0hJQyrVF0q3GgHftPNcV0qXOp/sBdhFBou6jcMpl0qNNxrmlz8XUMnC/fBFw7067uGG40ptITCGoVqFLaPwhqFahS2j8IahWoUto/CGoVqFLaPwhqFahS2j8IahWoUto/CGoVqFLaPwhqFahS2j8IahWoUto/CGoVqFLaPwlqAhc1/4NHfx2Qq9H7lXhT1dNaNf1HqDc/djt4YrroXa+3rtx1Wb4PWlQfq/zPrWy8PAAAAAAAAAAAAAAAAAAAA4D/0F5lQSZ+5G/qbAAAAAElFTkSuQmCC" alt="" height="43px" width="43px" style="border-radius: 600px;">
+            </a>
+        </div>
+
+    
+    
+
+</body>
+</html>
