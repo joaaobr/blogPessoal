@@ -1,7 +1,8 @@
 const express = require('express')
+const serverless = require("serverless-http")
 const app = express()
-const port = process.env.port || 3000
-
+const port = 3000
+const router = express.Router()
 // configs
     // ejs
         app.set('view engine', 'ejs')
@@ -11,13 +12,15 @@ const port = process.env.port || 3000
 
 
 
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.render('index')
 })
 
-app.get('/posts/ejs', (req, res) => {
+router.get('/posts/ejs', (req, res) => {
     res.render('post_ejs')
 })
 
+app.use('/.netlify/functions/api', router)
 
-app.listen(port)
+
+module.exports.handler = serverless(app)
