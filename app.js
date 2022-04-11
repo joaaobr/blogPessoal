@@ -12,11 +12,12 @@ const port = 3000
 
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('home')
 })
 
-app.get('/posts/ejs', (req, res) => {
-    res.render('post_ejs')
+app.get('/posts', (req, res) => {
+    //res.render('post_ejs')
+    res.send('Não há nenhum artigo disponivel...')
 })
 
 

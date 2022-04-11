@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>João Victor</title>
+    <link rel="shortcut icon" href="https://psfonttk.com/wp-content/uploads/2021/07/Letra-j-para-imprimir.png" >
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            text-align: center;
+        }
+
+        h1{
+            color: rgb(31, 29, 29);
+            font-size: 40px;
+            margin-top: 12px;
+        }
+        p{
+            color: rgb(30, 30, 30);
+            font-size: 15px;
+            margin-top: 7px;
+        }
+
+        .github{
+            
+            display: flex;
+            position: absolute;
+            height: 152px;
+            width: 340px;
+            border: 1px rgb(238, 236, 236) solid;
+            border-radius: 8px;
+            margin-left: 500px;
+            margin-top: 14px;
+        }
+
+        .h2git{
+            position: absolute;
+            margin-top: 18px;
+            margin-left: 22px;
+            color: rgb(78, 77, 77);
+        }
+
+        .pgit{
+            position: absolute;
+            margin-top: 60px;
+            margin-left: 22px;
+            font-size: 17px;
+            color: grey;
+        }
+
+        .github:hover{
+            color: rgb(136, 136, 218);
+            border: 1px rgb(218, 216, 219) solid;
+            height: 153px;
+            width: 342px;
+            transition-duration: 0.9s;
+            background-color: rgb(250, 250, 250);
+        }
+
+        .pgit:hover{
+            transition-duration: 2.9s; 
+            color: rgb(79, 82, 72);
+        }
+
+        .h2git:hover{
+            color: rgb(58, 57, 57);
+            transition-duration: 1.8s;
+        }
+
+        .artigos{
+            display: flex;
+            position: absolute;
+            height: 152px;
+            width: 340px;
+            border: 1px rgb(238, 236, 236) solid;
+            border-radius: 8px;
+            margin-left: 850px;
+            margin-top: 14px;
+        }
+
+        .h2arti{
+            position: absolute;
+            margin-top: 18px;
+            margin-left: 22px;
+            color: rgb(78, 77, 77);
+        }
+
+        .parti{
+            position: absolute;
+            margin-top: 60px;
+            margin-left: 22px;
+            font-size: 17px;
+            color: grey;
+        }
+
+        .artigos:hover{
+            color: rgb(136, 136, 218);
+            border: 1px rgb(218, 216, 219) solid;
+            height: 153px;
+            width: 342px;
+            transition-duration: 0.9s;
+            background-color: rgb(250, 250, 250);
+        }
+
+        .parti:hover{
+            transition-duration: 2.9s; 
+            color: rgb(79, 82, 72);
+        }
+
+        .h2arti:hover{
+            color: rgb(58, 57, 57);
+            transition-duration: 1.8s;
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <img id="foto" src="https://avatars.githubusercontent.com/u/78286328?s=400&u=4cb154e819405c8a0a9e490bd3a18c4680320301&v=4" alt="imagem" height="185px"
+        width="185px" style="border-radius: 600px; margin-top: 35px;" >
+        <h1>João Victor Dos Santos</h1>
+        <p>Meu nome é João Victor Dos Santos e eu amo programar!! <br>
+        Atualmente estudo JavaScript/Node.js  <br>
+        Estou sempre tentando aprender novos fremeworks e tecnologias.</p>
+        <br>
+
+        <%- include('partials/github') %>
+        <%- include('partials/artigos') %>
+</body>
+</html>
